@@ -17,6 +17,22 @@
 		074ADB572D3312CA0031EA39 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 074ADB562D3312CA0031EA39 /* Auth0.plist */; };
 		074ADB592D3315B00031EA39 /* iOS_SwiftUI_LoginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB582D3315B00031EA39 /* iOS_SwiftUI_LoginApp.swift */; };
 		074ADB5B2D3315D80031EA39 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB5A2D3315D80031EA39 /* Profile.swift */; };
+		074ADB9A2D33677E0031EA39 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB902D33677D0031EA39 /* FeedViewModel.swift */; };
+		074ADB9B2D33677E0031EA39 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB912D33677D0031EA39 /* HistoryView.swift */; };
+		074ADB9E2D33677E0031EA39 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB942D33677D0031EA39 /* FeedView.swift */; };
+		074ADB9F2D33677E0031EA39 /* PostingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB952D33677E0031EA39 /* PostingPage.swift */; };
+		074ADBA02D33677E0031EA39 /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB962D33677E0031EA39 /* PostRow.swift */; };
+		074ADBA12D33677E0031EA39 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB972D33677E0031EA39 /* ProfileView.swift */; };
+		074ADBA22D33677E0031EA39 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB982D33677E0031EA39 /* Post.swift */; };
+		074ADBA32D33677E0031EA39 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADB992D33677E0031EA39 /* MainTabView.swift */; };
+		074ADBA52D3383CE0031EA39 /* foodsuggestion.py in Resources */ = {isa = PBXBuildFile; fileRef = 074ADBA42D3383CD0031EA39 /* foodsuggestion.py */; };
+		074ADBA92D33948A0031EA39 /* FoodSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADBA82D33948A0031EA39 /* FoodSuggestions.swift */; };
+		074ADBAC2D33A2C00031EA39 /* suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 074ADBAB2D33A2C00031EA39 /* suggestions.json */; };
+		074ADBAE2D33A2D30031EA39 /* food_suggestions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 074ADBAD2D33A2D30031EA39 /* food_suggestions.txt */; };
+		074ADBB02D33C7F00031EA39 /* ColourExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ADBAF2D33C7EF0031EA39 /* ColourExtensions.swift */; };
+		074ADBB22D33C8AF0031EA39 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074ADBB12D33C8AF0031EA39 /* Media.xcassets */; };
+		074ADBB72D3404470031EA39 /* food_shuffle.txt in Resources */ = {isa = PBXBuildFile; fileRef = 074ADBB62D3404460031EA39 /* food_shuffle.txt */; };
+		074ADBB92D3405AD0031EA39 /* food_shuffled.txt in Resources */ = {isa = PBXBuildFile; fileRef = 074ADBB82D3405AD0031EA39 /* food_shuffled.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,22 @@
 		074ADB562D3312CA0031EA39 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		074ADB582D3315B00031EA39 /* iOS_SwiftUI_LoginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_SwiftUI_LoginApp.swift; sourceTree = "<group>"; };
 		074ADB5A2D3315D80031EA39 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		074ADB902D33677D0031EA39 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		074ADB912D33677D0031EA39 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		074ADB942D33677D0031EA39 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		074ADB952D33677E0031EA39 /* PostingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostingPage.swift; sourceTree = "<group>"; };
+		074ADB962D33677E0031EA39 /* PostRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
+		074ADB972D33677E0031EA39 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		074ADB982D33677E0031EA39 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		074ADB992D33677E0031EA39 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		074ADBA42D3383CD0031EA39 /* foodsuggestion.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = foodsuggestion.py; sourceTree = "<group>"; };
+		074ADBA82D33948A0031EA39 /* FoodSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSuggestions.swift; sourceTree = "<group>"; };
+		074ADBAB2D33A2C00031EA39 /* suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = suggestions.json; path = ../../../../Desktop/cohere/suggestions.json; sourceTree = "<group>"; };
+		074ADBAD2D33A2D30031EA39 /* food_suggestions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food_suggestions.txt; sourceTree = "<group>"; };
+		074ADBAF2D33C7EF0031EA39 /* ColourExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourExtensions.swift; sourceTree = "<group>"; };
+		074ADBB12D33C8AF0031EA39 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		074ADBB62D3404460031EA39 /* food_shuffle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food_shuffle.txt; sourceTree = "<group>"; };
+		074ADBB82D3405AD0031EA39 /* food_shuffled.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food_shuffled.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +132,28 @@
 		074ADB262D330A6D0031EA39 /* deltahacks */ = {
 			isa = PBXGroup;
 			children = (
+				074ADBB12D33C8AF0031EA39 /* Media.xcassets */,
+				074ADBA42D3383CD0031EA39 /* foodsuggestion.py */,
+				074ADBAD2D33A2D30031EA39 /* food_suggestions.txt */,
+				074ADBB62D3404460031EA39 /* food_shuffle.txt */,
+				074ADBB82D3405AD0031EA39 /* food_shuffled.txt */,
+				074ADBAB2D33A2C00031EA39 /* suggestions.json */,
 				074ADB292D330A6D0031EA39 /* ContentView.swift */,
+				074ADBAF2D33C7EF0031EA39 /* ColourExtensions.swift */,
 				074ADB582D3315B00031EA39 /* iOS_SwiftUI_LoginApp.swift */,
 				074ADB5A2D3315D80031EA39 /* Profile.swift */,
+				074ADB942D33677D0031EA39 /* FeedView.swift */,
+				074ADB902D33677D0031EA39 /* FeedViewModel.swift */,
+				074ADB912D33677D0031EA39 /* HistoryView.swift */,
+				074ADB992D33677E0031EA39 /* MainTabView.swift */,
+				074ADB982D33677E0031EA39 /* Post.swift */,
+				074ADB952D33677E0031EA39 /* PostingPage.swift */,
+				074ADB962D33677E0031EA39 /* PostRow.swift */,
+				074ADB972D33677E0031EA39 /* ProfileView.swift */,
+				074ADBA82D33948A0031EA39 /* FoodSuggestions.swift */,
 				074ADB2B2D330A6F0031EA39 /* Assets.xcassets */,
+				074ADB882D332DE20031EA39 /* Resources */,
+				074ADB8A2D332E100031EA39 /* Utils */,
 				074ADB2D2D330A6F0031EA39 /* Preview Content */,
 				074ADB562D3312CA0031EA39 /* Auth0.plist */,
 			);
@@ -133,6 +183,20 @@
 				074ADB442D330A700031EA39 /* deltahacksUITestsLaunchTests.swift */,
 			);
 			path = deltahacksUITests;
+			sourceTree = "<group>";
+		};
+		074ADB882D332DE20031EA39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		074ADB8A2D332E100031EA39 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +292,7 @@
 			mainGroup = 074ADB1B2D330A6C0031EA39;
 			packageReferences = (
 				074ADB512D330A990031EA39 /* XCRemoteSwiftPackageReference "Auth0" */,
+				074ADBAA2D339F680031EA39 /* XCRemoteSwiftPackageReference "Pyto" */,
 			);
 			productRefGroup = 074ADB252D330A6D0031EA39 /* Products */;
 			projectDirPath = "";
@@ -245,8 +310,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074ADBAE2D33A2D30031EA39 /* food_suggestions.txt in Resources */,
+				074ADBAC2D33A2C00031EA39 /* suggestions.json in Resources */,
+				074ADBB72D3404470031EA39 /* food_shuffle.txt in Resources */,
+				074ADBB22D33C8AF0031EA39 /* Media.xcassets in Resources */,
+				074ADBA52D3383CE0031EA39 /* foodsuggestion.py in Resources */,
 				074ADB2F2D330A6F0031EA39 /* Preview Assets.xcassets in Resources */,
 				074ADB572D3312CA0031EA39 /* Auth0.plist in Resources */,
+				074ADBB92D3405AD0031EA39 /* food_shuffled.txt in Resources */,
 				074ADB2C2D330A6F0031EA39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +343,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074ADB9E2D33677E0031EA39 /* FeedView.swift in Sources */,
+				074ADBA22D33677E0031EA39 /* Post.swift in Sources */,
+				074ADBA12D33677E0031EA39 /* ProfileView.swift in Sources */,
+				074ADBA92D33948A0031EA39 /* FoodSuggestions.swift in Sources */,
+				074ADBB02D33C7F00031EA39 /* ColourExtensions.swift in Sources */,
 				074ADB2A2D330A6D0031EA39 /* ContentView.swift in Sources */,
 				074ADB5B2D3315D80031EA39 /* Profile.swift in Sources */,
+				074ADB9B2D33677E0031EA39 /* HistoryView.swift in Sources */,
+				074ADB9F2D33677E0031EA39 /* PostingPage.swift in Sources */,
+				074ADB9A2D33677E0031EA39 /* FeedViewModel.swift in Sources */,
+				074ADBA02D33677E0031EA39 /* PostRow.swift in Sources */,
 				074ADB592D3315B00031EA39 /* iOS_SwiftUI_LoginApp.swift in Sources */,
+				074ADBA32D33677E0031EA39 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +693,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.10.0;
+			};
+		};
+		074ADBAA2D339F680031EA39 /* XCRemoteSwiftPackageReference "Pyto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ColdGrub1384/Pyto";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

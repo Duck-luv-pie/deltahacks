@@ -4,49 +4,55 @@ import Auth0
 
 struct ContentView: View {
   
+  @StateObject private var feedViewModel = FeedViewModel()
   @State private var isAuthenticated = false
   @State var userProfile = Profile.empty
   
   var body: some View {
-      
-    if isAuthenticated {
-      VStack {
+      if isAuthenticated {
+                  MainTabView(onLogout: {
+                      logout() // Pass the logout function
+                  })
+                  .environmentObject(feedViewModel) // Inject the ViewModel
+              } else {
+                  ZStack {
+                              Color.lightGreen // Light green background
+                                  .ignoresSafeArea()
 
-        Text("You’re logged in!")
-          .modifier(TitleStyle())
-  
-        UserImage(urlString: userProfile.picture)
-        
-        VStack {
-          Text("Name: \(userProfile.name)")
-          Text("Email: \(userProfile.email)")
-        }
-        .padding()
-        
-        Button("Log out") {
-          logout()
-        }
-        .buttonStyle(MyButtonStyle())
-        
-      } // VStack
-    
-    } else {
-      
-      VStack {
-        
-        Text("Welcome to Proj")
-          .modifier(TitleStyle())
-        
-        Button("Log in") {
-          login()
-        }
-        .buttonStyle(MyButtonStyle())
-        
-      } // VStack
-      
-    }
-    
-  }
+                              VStack(spacing: 20) {
+                                  // NutriGram Logo
+                                  if let image = UIImage(contentsOfFile: "/Users/eric/NutriGram_Logo.png") {
+                                      Image(uiImage: image)
+                                          .resizable()
+                                          .scaledToFit()
+                                          .frame(width: 200, height: 200) // Adjust size if needed
+                                          .cornerRadius(10)
+                                  } else {
+                                      RoundedRectangle(cornerRadius: 10)
+                                          .fill(Color.gray.opacity(0.2))
+                                          .frame(width: 200, height: 200)
+                                          .overlay(Text("Logo Not Found").foregroundColor(.foregroundWhite))
+                                  }
+
+                                  Spacer().frame(height: 20)
+
+                                  // Welcome Text
+                                  Text("Welcome to NutriGram")
+                                      .modifier(TitleStyle())
+                                      .foregroundColor(Color(hex: "5B714B"))
+                                  Spacer().frame(height: 20)
+
+                                  // Login Button
+                                  Button("Log in") {
+                                      login()
+                                  }
+                                  .buttonStyle(MyButtonStyle())
+                              }
+                              .padding()
+                          }
+                      
+              }
+          }
     //this comment is for testing
   
   
@@ -68,29 +74,30 @@ struct ContentView: View {
     }
   }
 
-  struct TitleStyle: ViewModifier {
-    let titleFontBold = Font.title.weight(.bold)
-    let navyBlue = Color(red: 0, green: 0, blue: 0.5)
-    
-    func body(content: Content) -> some View {
-      content
-        .font(titleFontBold)
-        .foregroundColor(navyBlue)
-        .padding()
+    struct TitleStyle: ViewModifier {
+        let darkGreen = Color(hex: "5B714B") // Use your dark green color
+
+        func body(content: Content) -> some View {
+            content
+                .font(.title.weight(.bold))
+                .foregroundColor(darkGreen) // Set text color to dark green
+                .padding()
+        }
     }
-  }
+
   
-  struct MyButtonStyle: ButtonStyle {
-    let navyBlue = Color(red: 0, green: 0, blue: 0.5)
-    
-    func makeBody(configuration: Configuration) -> some View {
-      configuration.label
-        .padding()
-        .background(navyBlue)
-        .foregroundColor(.white)
-        .clipShape(Capsule())
+    struct MyButtonStyle: ButtonStyle {
+        let darkGreen = Color(hex: "5B714B") // Use your dark green color
+
+        func makeBody(configuration: Configuration) -> some View {
+            configuration.label
+                .padding()
+                .background(darkGreen) // Set button background to dark green
+                .foregroundColor(.white) // Set text color to white
+                .clipShape(Capsule())
+        }
     }
-  }
+
   
 }
 

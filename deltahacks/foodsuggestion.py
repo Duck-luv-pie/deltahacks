@@ -2,48 +2,66 @@ import cohere
 
 # Initialize Cohere API client
 co = cohere.ClientV2(api_key="3JcjPjz2HMeGravtUVl335s4pkmY8VlPDemrUx6h")
+
+# Predefined array of eaten foods
+eaten_food = ["Pizza", "Hamburger", "Ice Cream", "Chicken Wing", "Peanuts"]
+
 # Function to generate food ideas using the chat API
-def generate_food_ideas(past_foods, feedback=None):
-    messages = [
-        {"role": "system", "content": "You are a helpful assistant that generates creative food ideas."},
-        {"role": "user", "content": f"Based on these foods: {', '.join(past_foods)}, generate 10 new food ideas."}
-    ]
+def generate_food_ideas(past_foods):
+    # Construct the user message with examples
+    message = f"""Based on the foods provided below, generate 3 creative new food ideas that are not in the given list:
 
-    if feedback and "healthy" in feedback.lower():
-        messages.append({"role": "user", "content": "Focus on healthier options like salads, plant-based dishes, and low-calorie meals."})
-    elif feedback and "indulgent" in feedback.lower():
-        messages.append({"role": "user", "content": "Avoid healthier items like salads, vegetables, and low-calorie foods. Focus on indulgent options like fried or cheesy dishes."})
+Eaten foods: {', '.join(past_foods)}
 
+Please format the output as a numbered list, like this:
+1. Sushi
+2. Salad
+3. Tacos
+"""
+
+    # Make the Chat API call
     response = co.chat(
-        model="command-r7b-12-2024-vllm",  # Use the correct model for chat
-        messages=messages,
+        model="command-r-plus-08-2024",  # Replace with the correct model name for your use case
+        messages=[{"role": "user", "content": message}],
     )
 
-    # Return the assistant's reply from the first assistant message
-    return response.generations[0].text.strip()
+    # Access the text content of the assistant's response
+    raw_response = response.message.content
+    suggestions = []
+
+    # Extract text from the content list
+    for item in raw_response:
+        if hasattr(item, "text"):  # Ensure the item has a 'text' attribute
+            suggestions.extend(item.text.strip().split("\n"))  # Split by newlines to extract each suggestion
+
+    # Filter out empty or malformed lines and only keep numbered suggestions
+    suggestions = [
+        line.split(". ", 1)[-1]
+        for line in suggestions
+        if line.strip() and line.strip()[0].isdigit()  # Ensure the line starts with a number
+    ]
+
+    return suggestions[:3]  # Limit to the top 3 suggestions
 
 # Main function
 def main():
-    print("Welcome to the Food Suggestion Generator!")
-    print("Please enter 10 foods you've eaten recently.")
-    
-    past_foods = []
-    for i in range(10):
-        food = input(f"Food {i + 1}: ")
-        past_foods.append(food)
+    print("Generating 3 new food suggestions based on the foods you've eaten...")
+    print("Eaten foods:", eaten_food)
 
-    # Generate initial suggestions
-    print("\nGenerating 10 food suggestions based on your input...\n")
-    suggestions = generate_food_ideas(past_foods)
-    print("Suggestions:\n", suggestions)
+    # Generate new food suggestions
+    suggestions = generate_food_ideas(eaten_food)
 
-    # Ask for feedback
-    feedback = input("\nDo you have any feedback? (e.g., 'More indulgent', 'Healthier options', or 'No feedback'): ")
-    print("\nGenerating 10 more suggestions based on your feedback...\n")
-    
-    # Generate refined suggestions
-    refined_suggestions = generate_food_ideas(past_foods, feedback)
-    print("Refined Suggestions:\n", refined_suggestions)
+    # Print the suggestions
+    print("\nSuggestions for you to try:")
+    print(suggestions)
+
+    # Write the suggestions to a .txt file, each on its own line
+    output_file = "food_suggestions.txt"
+    with open(output_file, "w", encoding="utf-8") as f:
+        for suggestion in suggestions:
+            f.write(suggestion + "\n")
+
+    print(f"\nThe suggestions have been saved to {output_file}")
 
 # Run the main function
 if __name__ == "__main__":

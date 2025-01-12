@@ -1,14 +1,8 @@
-//
-//  MainTabView.swift
-//  dh2
-//
-//  Created by Sania Shah on 2025-01-11.
-//
-
 import SwiftUI
 
 struct MainTabView: View {
     @EnvironmentObject var feedViewModel: FeedViewModel // Use the shared instance
+    let onLogout: () -> Void // Logout callback function
 
     var body: some View {
         TabView {
@@ -26,7 +20,8 @@ struct MainTabView: View {
                 .tabItem {
                     Label("History", systemImage: "clock")
                 }
-            ProfileView()
+
+            ProfileView(onLogout: onLogout) // Pass the onLogout function
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }

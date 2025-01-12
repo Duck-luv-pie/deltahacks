@@ -1,9 +1,3 @@
-//
-//  HistoryView.swift
-//  dh2
-//
-//  Created by Sania Shah on 2025-01-11.
-//
 import SwiftUI
 
 struct HistoryView: View {
@@ -11,10 +5,19 @@ struct HistoryView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(feedViewModel.posts.filter { $0.username == "Current User" }, id: \.id) { post in
-                    PostRow(post: .constant(post)) // Bind constant `Post` for the history
+            ZStack {
+                // Green background
+                Color.lightGreen
+                    .ignoresSafeArea()
+
+                // List overlay
+                List {
+                    ForEach(feedViewModel.posts.filter { $0.username == "Eric Yoon" }, id: \.id) { post in
+                        PostRow(post: .constant(post))
+                            .listRowBackground(Color.white) // Make list row background transparent
+                    }
                 }
+                .scrollContentBackground(.hidden) // Remove the default background of the List
             }
             .navigationTitle("Your Posts")
         }
