@@ -1,7 +1,7 @@
 import cohere
 
 # Initialize Cohere API client
-co = cohere.ClientV2(api_key="3JcjPjz2HMeGravtUVl335s4pkmY8VlPDemrUx6h")
+co = cohere.ClientV2(api_key="yourapikey")
 
 # Predefined array of eaten foods
 eaten_food = ["Pizza", "Hamburger", "Ice Cream", "Chicken Wing", "Peanuts"]

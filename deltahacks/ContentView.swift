@@ -1,7 +1,7 @@
 import SwiftUI
 import Auth0
 
-
+ 
 struct ContentView: View {
   
   @StateObject private var feedViewModel = FeedViewModel()
