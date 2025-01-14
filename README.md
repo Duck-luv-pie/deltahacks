@@ -8,5 +8,8 @@ Our app allows users to share photos of their meals, fostering accountability, c
 
 At its heart, NutriGram acknowledges that food is more than fuel. It’s about family, culture, and connection. We aim to bring people together to celebrate their love for food while promoting wellness and positivity.
 
+![NutriGram logo](deltahacks/Media.xcassets/Nutrigram.imageset/Nutrigram.png)
+<br/><br/>
+
 ## Links
 Devpost: [https://devpost.com/software/nutrigram ](https://devpost.com/software/nutrigram)
